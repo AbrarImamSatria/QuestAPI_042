@@ -2,7 +2,6 @@ package com.example.pertemuan12.ui.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -28,7 +27,7 @@ import com.example.pertemuan12.ui.customwidget.CostumeTopAppBar
 import com.example.pertemuan12.ui.viewmodel.InsertUiEvent
 import com.example.pertemuan12.ui.viewmodel.InsertUiState
 import com.example.pertemuan12.ui.viewmodel.InsertViewModel
-import com.example.pertemuan12.ui.viewmodel.PenyediaViewModel
+import com.example.pertemuan12.ui.PenyediaViewModel
 import kotlinx.coroutines.launch
 
 object DestinasiEntry: DestinasiNavigasi{

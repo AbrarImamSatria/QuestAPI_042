@@ -17,7 +17,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Done
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -43,7 +42,7 @@ import com.example.pertemuan12.navigation.DestinasiNavigasi
 import com.example.pertemuan12.ui.customwidget.CostumeTopAppBar
 import com.example.pertemuan12.ui.viewmodel.HomeUiState
 import com.example.pertemuan12.ui.viewmodel.HomeViewModel
-import com.example.pertemuan12.ui.viewmodel.PenyediaViewModel
+import com.example.pertemuan12.ui.PenyediaViewModel
 
 object DestinasiHome:DestinasiNavigasi{
     override val route = "home"
@@ -54,7 +53,7 @@ object DestinasiHome:DestinasiNavigasi{
 @Composable
 fun HomeScreen(
     navigateToItemEntry: () -> Unit,
-    modifier: Modifier =Modifier,
+    modifier: Modifier = Modifier,
     onDetailClick: (String) -> Unit = {},
     viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ){
