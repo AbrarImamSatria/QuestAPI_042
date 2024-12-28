@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -31,6 +32,20 @@ import com.example.pertemuan12.R
 import com.example.pertemuan12.model.Mahasiswa
 
 @Composable
+fun OnLoading(modifier: Modifier = Modifier){
+    Image(
+        modifier = modifier.size(200.dp),
+        painter = painterResource(R.drawable.loading),
+        contentDescription = stringResource(R.string.loading)
+
+    )
+}
+
+/**
+ * The home sceen displaying error mssage with re-attempt button.
+ */
+
+@Composable
 fun OnError(retryAction: () -> Unit, modifier: Modifier = Modifier){
     Column(
         modifier = modifier,
@@ -38,7 +53,7 @@ fun OnError(retryAction: () -> Unit, modifier: Modifier = Modifier){
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_background), contentDescription = ""
+            painter = painterResource(id = R.drawable.eror), contentDescription = ""
         )
         Text(text = stringResource(R.string.loading_failed), modifier = Modifier.padding(16.dp))
         Button(onClick = retryAction) {
