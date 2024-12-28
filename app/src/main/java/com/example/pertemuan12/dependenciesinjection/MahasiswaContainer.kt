@@ -8,13 +8,13 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 
-interface MahasiwaContainer {
+interface AppContainer {
     val kontakRepository: MahasiswaRepository
 }
 
 class MahasiswaContainer:AppContainer{
 
-    private val baseUrl = "http://10.0.2.16:8000/umyTI/"
+    private val baseUrl = "http://10.0.2.16:80/umyTI/"
     private val json = Json{ignoreUnknownKeys = true}
     private val retrofit: Retrofit = Retrofit.Builder()
         .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
@@ -22,4 +22,7 @@ class MahasiswaContainer:AppContainer{
 
     private val mahasiswaService: MahasiswaService by lazy {
         retrofit.create(MahasiswaService::class.java)}
+
+    override val kontakRepository: MahasiswaRepository by lazy {
+        NetworkKontakRepository(mahasiswaService)}
 }
