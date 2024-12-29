@@ -8,12 +8,14 @@ import com.example.pertemuan12.MahasiswaApplications
 import com.example.pertemuan12.ui.viewmodel.DetailViewModel
 import com.example.pertemuan12.ui.viewmodel.HomeViewModel
 import com.example.pertemuan12.ui.viewmodel.InsertViewModel
+import com.example.pertemuan12.ui.viewmodel.UpdateViewModel
 
 object PenyediaViewModel{
     val Factory = viewModelFactory {
         initializer { HomeViewModel(aplikasiKontak().container.kontakRepository) }
         initializer { InsertViewModel(aplikasiKontak().container.kontakRepository) }
         initializer { DetailViewModel(aplikasiKontak().container.kontakRepository) }
+        initializer { UpdateViewModel(aplikasiKontak().container.kontakRepository) }
     }
 
     fun CreationExtras.aplikasiKontak():MahasiswaApplications =
