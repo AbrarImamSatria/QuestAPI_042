@@ -1,4 +1,4 @@
-## Tampilan loading ![Tampilan loading](https://github.com/user-attachments/assets/f38030c5-3124-49e0-9f47-dadc79362ab8)
+## Tampilan loading ![Screenshot_20241229_155948](https://github.com/user-attachments/assets/453a828e-d068-4fd0-838d-3a6355ab15c0)
 ## Tampilan connection eror ![Tampilan connection eror](https://github.com/user-attachments/assets/b5dbddce-d1ee-4a95-b412-abf3ab092b67)
 ## Tampilan Home Tanpa Data ![Tampilan Home Tanpa Data](https://github.com/user-attachments/assets/bfad8c89-6e43-47a8-9ef2-5e05e622d636)
 ## Tampilan insert mahasiswa tanpa data ![Tampilan insert mahasiswa tanpa data](https://github.com/user-attachments/assets/5ba30d82-6e61-4dd8-a261-f4d9da05d870)
