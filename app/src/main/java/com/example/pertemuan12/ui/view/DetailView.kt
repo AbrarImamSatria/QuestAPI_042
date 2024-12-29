@@ -3,6 +3,8 @@ package com.example.pertemuan12.ui.view
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
@@ -18,6 +20,23 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.pertemuan12.R
 import com.example.pertemuan12.model.Mahasiswa
+import com.example.pertemuan12.ui.viewmodel.DetailUiState
+
+@Composable
+private fun DetailStatus(
+    detailUiState: DetailUiState,
+    retryAction: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    when (detailUiState) {
+        is DetailUiState.Loading -> OnLoadingDetail(modifier = modifier.fillMaxSize())
+        is DetailUiState.Success -> DetailLayout(
+            mahasiswa = detailUiState.mahasiswa,
+            modifier = modifier.fillMaxWidth()
+        )
+        is DetailUiState.Error -> OnErrorDetail(retryAction, modifier = modifier.fillMaxSize())
+    }
+}
 
 @Composable
 private fun OnErrorDetail(retryAction: () -> Unit, modifier: Modifier = Modifier) {
